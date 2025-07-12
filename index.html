@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Encoder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h2>🔐 Enter Password</h2>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Login</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="app-screen" style="display: none;">
+    <h1>🔏 Secret Message Encoder/Decoder</h1>
+
+    <textarea id="input-message" placeholder="Enter your secret message..."></textarea><br>
+    <input type="text" id="key" placeholder="Vigenère Key (secret word)"><br>
+
+    <button onclick="encode()">🔒 Encrypt + Encode</button>
+    <button onclick="decode()">🔓 Decode + Decrypt</button>
+
+    <h3>Result:</h3>
+    <textarea id="output" readonly></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
